@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    background-color: rgb(233, 238, 238);
+    font-family: "Poppins", sans-serif;
+}
+
+h1 {
+    color: brown;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+.container {
+    margin: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a button {
+    color: brown;
+    border: none;
+    padding: 8px 15px;
+    margin: 0 10px 0 0;
+    border-radius: 5px;
+    border: 1.5px solid brown;
+    cursor: pointer;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+a button:hover {
+    background-color: brown;
+    color: #fff;
+    transition: 0.3s;
+}
+
+/* --------------------------- */
+
+.cad{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;    
+    text-align: center; 
+}
+
+.cad form{
+    display:flex;
+    flex-direction:column; /* um embaixo do outro */
+    gap:10px;
+}
+
+.cad input, textarea{
+    border: 1.5px solid #ccc;
+    padding: 8px 7px;
+}
+
+.btfo{
+    color: brown;
+    border: none;
+    padding: 8px 15px;
+    margin: 0 10px 0 0;
+    border-radius: 5px;
+    border: 1.5px solid brown;
+    cursor: pointer;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.btfo:hover {
+    background-color: brown;
+    color: #fff;
+    transition: 0.3s;
+}   
+
+hr {
+    margin-bottom: 10px;
+}
