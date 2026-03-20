@@ -1,0 +1,38 @@
+body {
+    font-family: Arial;
+    background: #f9f9f9;
+    margin: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    background: #eee;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: blue;
+}
+
+button {
+    padding: 10px;
+    background: blue;
+    color: white;
+    border: none;
+}

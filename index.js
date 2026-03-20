@@ -1,29 +1,32 @@
-const express = require("express");
+const express = require('express');
+const exphbs = require('express-handlebars');
+const bodyParser = require('body-parser');
+
+const tarefasController = require('./controllers/tarefasController');
+
 const app = express();
-const handlebars = require("express-handlebars");
-const bodyParser = require("body-parser");
-const path = require("path");
 
-const RotaPost = require("./controllers/PostController");
-const RotaCliente = require("./controllers/ClienteController");
+// Handlebars
+app.engine('handlebars', exphbs.engine({
+    defaultLayout: 'layout',
+    layoutsDir: __dirname + '/views/layouts'
+}));
 
-app.use(express.static(path.join(__dirname, "public")));
+app.set('view engine', 'handlebars');
 
-app.engine("handlebars", handlebars.engine({ defaultLayout: "main" }));
-app.set("view engine", "handlebars");
+// Middlewares
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static('public'));
 
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
+// Rotas
+app.get('/', tarefasController.exibirLista);
+app.get('/tarefas/adicionar', tarefasController.exibirAdicionarTarefa);
+app.post('/tarefas', tarefasController.adicionarTarefa);
+app.get('/tarefas/:id/editar', tarefasController.exibirEdicao);
+app.post('/tarefas/:id/editar', tarefasController.editarTarefa);
+app.get('/tarefas/:id/excluir', tarefasController.excluirTarefa);
 
-// rotas
-app.use("/postagens", RotaPost);
-app.use("/clientes", RotaCliente);
-
-// rota inicial
-app.get("/", function(req, res) {
-    res.redirect("/postagens");
-});
-
-app.listen(8081, function() {
-    console.log("Servidor Rodando");
+// Servidor
+app.listen(8081, () => {
+    console.log("http://localhost:8081");
 });
