@@ -1,0 +1,17 @@
+<div class="container">
+    <h1>Lista de Clientes</h1>
+
+    {{#each clientes}}
+        <p><strong>ID:</strong> {{id}}</p>
+        <p><strong>Nome:</strong> {{nome}}</p>
+        <p><strong>Email:</strong> {{email}}</p>
+        <p><strong>Telefone:</strong> {{telefone}}</p>
+        <p><strong>Data:</strong> {{createdAt}}</p>
+
+        <div class="buttons">
+            <a class="bt" href="/clientes/deletar/{{id}}"><button>Deletar</button></a>
+            <a class="bt" href="/clientes/alterar/{{id}}"><button>Alterar</button></a>
+        </div>
+        <hr>
+    {{/each}}
+</div>

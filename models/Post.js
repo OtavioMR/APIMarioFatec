@@ -1,8 +1,7 @@
-const db= require('./db');
+const db = require("./db");
 
-//criando a tabela postagens
-
-const Post = db.sequelize.define('postagens', {
+// criando a tabela postagens
+const Post = db.sequelize.define("postagens", {
     titulo: {
         type: db.Sequelize.STRING
     },
@@ -11,7 +10,6 @@ const Post = db.sequelize.define('postagens', {
     }
 });
 
-Post.sync({force: false});
+Post.sync({ force: false });
 
-module.exports= Post;
-
+module.exports = Post;

@@ -1,14 +1,14 @@
 <div class="cad">
-    <form action="/update" method="POST">
+    <form action="/postagens/update" method="POST">
 
         {{#each posts}}
-        <input placeholder="codigo" type="text" name="id" value="{{id}}" readonly="true">
+            <input placeholder="codigo" type="text" name="id" value="{{id}}" readonly="true">
 
-        <input placeholder="titulo" type="text" name="titulo" value="{{titulo}}">
+            <input placeholder="titulo" type="text" name="titulo" value="{{titulo}}">
 
-        <textarea placeholder="conteudo" name="conteudo"> {{conteudo}}</textarea><br>
+            <textarea placeholder="conteudo" name="conteudo">{{conteudo}}</textarea><br>
 
-        <input class="btfo" type="submit" value="Alterar">
+            <input class="btfo" type="submit" value="Alterar">
         {{/each}}
 
     </form>

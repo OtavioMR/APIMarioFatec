@@ -1,17 +1,16 @@
 <div class="container">
-    <h1>Lista de Post: </h1>
+    <h1>Lista de Postagens</h1>
 
     {{#each posts}}
-    <p>Id: {{id}}</p>
-    <p>Título: {{titulo}}</p>
-    <p>Conteudo: {{conteudo}}</p>
-    <p>Data: {{createdAt}}</p>
+        <p>Id: {{id}}</p>
+        <p>Título: {{titulo}}</p>
+        <p>Conteúdo: {{conteudo}}</p>
+        <p>Data: {{createdAt}}</p>
 
-    <div class="buttons">
-        <a class="bt" href="/deletar/{{id}}"><button>Deletar</button></a>
-        <a class="bt" href="/alterar/{{id}}"><button>Alterar</button></a>
-    </div>
-    <hr>
-
+        <div class="buttons">
+            <a class="bt" href="/postagens/deletar/{{id}}"><button>Deletar</button></a>
+            <a class="bt" href="/postagens/alterar/{{id}}"><button>Alterar</button></a>
+        </div>
+        <hr>
     {{/each}}
 </div>

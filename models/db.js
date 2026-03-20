@@ -1,9 +1,9 @@
-const Sequelize = require('sequelize');
+const Sequelize = require("sequelize");
 
-const sequelize = new Sequelize('postapp', 'root', 'root', {
+const sequelize = new Sequelize("postapp", "root", "root", {
     host: "localhost",
     port: "3306",
-    dialect: 'mysql'
+    dialect: "mysql"
 });
 
 sequelize.authenticate()
@@ -17,4 +17,4 @@ sequelize.authenticate()
 module.exports = {
     Sequelize: Sequelize,
     sequelize: sequelize
-}
+};

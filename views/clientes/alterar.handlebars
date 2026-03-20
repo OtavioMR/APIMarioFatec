@@ -1,0 +1,17 @@
+<div class="cad">
+    <form action="/clientes/update" method="POST">
+
+        {{#each clientes}}
+            <input placeholder="Código" type="text" name="id" value="{{id}}" readonly="true"><br><br>
+
+            <input placeholder="Nome" type="text" name="nome" value="{{nome}}"><br><br>
+
+            <input placeholder="Email" type="email" name="email" value="{{email}}"><br><br>
+
+            <input placeholder="Telefone" type="text" name="telefone" value="{{telefone}}"><br><br>
+
+            <input class="btfo" type="submit" value="Alterar">
+        {{/each}}
+
+    </form>
+</div>
