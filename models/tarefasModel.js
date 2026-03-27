@@ -1,8 +1,8 @@
 let tarefas = [
-    { id: 1, descricao: "Estudar Node.js", concluida: false },
-    { id: 2, descricao: "Revisar JavaScript", concluida: true },
-    { id: 3, descricao: "Viu o prof Mário Hoje?", concluida: false },
-    { id: 4, descricao: "Já disse que o prof Mário é legal?", concluida: false }
+    { id: 1, descricao: "Mário (que Mário ?)", concluida: false },
+    { id: 2, descricao: "André doidão", concluida: true },
+    { id: 3, descricao: "Otávio se fosse professor", concluida: false },
+    { id: 4, descricao: "Marinho novamente", concluida: false }
 ];
 
 module.exports = {
